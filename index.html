@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-    <title>bENİM-PRosfjWRINMF</title>
+    <title>AR - Prompt as Fate</title>
     <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1.3.0/dist/aframe-master.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js@3.4.5/aframe/build/aframe-ar.js"></script>
     <style>
@@ -16,16 +16,16 @@
       vr-mode-ui="enabled: false"
       renderer="logarithmicDepthBuffer: true; precision: medium;"
       embedded
-      arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono; matrixCodeType: 3x3;">
+      arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
 
       <a-assets>
-        <img id="arImage" src="B.jpg" crossorigin="anonymous">
-        <img id="arImage2" src="AR.png" crossorigin="anonymous">
+        <img id="arImage" src="AR.png" crossorigin="anonymous">
+        <img id="arImageB" src="B.jpg" crossorigin="anonymous">
       </a-assets>
 
       <a-marker
         type="pattern"
-        url="pattern-B.patt"
+        url="pattern-marker.patt"
         smooth="true"
         smoothCount="10"
         smoothTolerance="0.01"
@@ -35,19 +35,19 @@
         <a-image
           src="#arImage"
           rotation="-90 0 0"
-          position="0 0.01 0"
+          position="-1.3 0.01 0"
           width="2.4"
           height="1.6"
-          opacity="0.5">
+          opacity="1">
         </a-image>
 
         <a-image
-          src="#arImage2"
+          src="#arImageB"
           rotation="-90 0 0"
-          position="0 0.1 0"
-          width="1.4"
-          height="1.4"
-          opacity="0.5">
+          position="1.3 0.01 0"
+          width="2.4"
+          height="1.6"
+          opacity="1">
         </a-image>
 
       </a-marker>
